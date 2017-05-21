@@ -25,6 +25,7 @@
         </activity>
         <activity
             android:name=".activity.SurfaceActivity"
+            android:label="@string/video"
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity android:name=".activity.HistoryActivity"></activity>
     </application>

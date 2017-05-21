@@ -18,4 +18,6 @@
     <string name="next">已经到最后一页!</string>
 
     <string name="timeinit">00:00/00:00</string>
+
+    <string name="video">视频</string>
 </resources>
