@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -40,6 +41,7 @@ public class MainActivity extends CheckPermissionsActivity {
     private MyDatabaseHelper dbHelper;
     private RecyclerView videosRecycler;
     private ShowInfoRecAdapter adapter;
+    private SwipeRefreshLayout refreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +50,6 @@ public class MainActivity extends CheckPermissionsActivity {
 
         //dbHelper = new MyDatabaseHelper(MainActivity.this, "VideoMsg.db", null, 2);
         //dbHelper.getWritableDatabase();
-
         Intent intent = new Intent(this, DownloadService.class);
         startService(intent); // 启动服务
         bindService(intent, connection, BIND_AUTO_CREATE); // 绑定服务
@@ -67,6 +68,35 @@ public class MainActivity extends CheckPermissionsActivity {
             e.printStackTrace();
         }
 
+        refreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresh);
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+
+            @Override
+            public void onRefresh() {
+                refreshTest();
+            }
+        });
+
+    }
+
+    private void refreshTest() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        // TODO: 17-5-21 刷新待实现 ////
+                        refreshLayout.setRefreshing(false);
+                    }
+                });
+            }
+        }).start();
     }
 
     public String setParams() {
@@ -102,4 +132,6 @@ public class MainActivity extends CheckPermissionsActivity {
         super.onDestroy();
         unbindService(connection);
     }
+
+
 }
