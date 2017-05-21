@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">文泰TV</string>
+    <string name="detail">沃尔沃XC90取消副驾驶，享受真正老板的待遇</string>
+    <string name="time">2017-05-19 15:55:01</string>
+
+    <string name="title_activity_playing">PlayingActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+
+    <string name="beginDownload">开始下载</string>
+
+    <string name="pre">不能再往前翻了......</string>
+    <string name="next">已经到最后一页!</string>
+
+    <string name="timeinit">00:00/00:00</string>
+</resources>

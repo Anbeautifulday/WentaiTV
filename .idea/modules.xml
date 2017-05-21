@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WentaiTV.iml" filepath="$PROJECT_DIR$/WentaiTV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/download/download.iml" filepath="$PROJECT_DIR$/download/download.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myson/myson.iml" filepath="$PROJECT_DIR$/myson/myson.iml" />
+    </modules>
+  </component>
+</project>
